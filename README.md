@@ -1,4 +1,4 @@
-# Animal Dataset Preparation - Python task
+# Dataloader project - Python Task
 
 This repository contains my implementation of the first part of a dataloader assignment , which is inspired by 'torch.utils.data.Dataset'
 
