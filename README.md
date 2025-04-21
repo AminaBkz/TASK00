@@ -19,3 +19,5 @@ https://www.geeksforgeeks.org/python-os-rename-method/
 https://www.youtube.com/watch?v=NOvFZamGXXo
 https://python-forum.io/thread-32534.html
 https://pytorch.org/docs/stable/data.html
+https://stackoverflow.com/questions/18805348/how-rename-the-images-in-folder
+https://www.geeksforgeeks.org/python-os-listdir-method/
