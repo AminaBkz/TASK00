@@ -19,15 +19,19 @@ rename_images_in_folder(folder_path)'''
 
 import os
 
-def rename(folder_path):
-    for idx, filename in enumerate(os.listdir(folder_path)):
-        src = f"{folder_path}\\{filename}"
-        dst = f"{folder_path}\\imaage-{idx:02d}.png"
-        os.rename(src, dst)
-        print(f"Renamed {src} to {dst}")
 
-root_folder = r"C:\Users\bouak\OneDrive\Desktop\Dataloader Dataset"
+def rename_images(root_dir, ext='png'):
+    for subfolder in os.listdir(root_dir):
+        subfolder_path = os.path.join(root_dir,subfolder)
+        if os.path.isdir(subfolder_path):
+            files = sorted([f for f in os.listdir(subfolder_path)])[:20]
 
-for subfolder in os.listdir(root_folder):
-    subfolder_path = f"{root_folder}\\{subfolder}"
-    rename(subfolder_path)
+            for index, filename in enumerate(files):
+                old_path = os.path.join(subfolder_path, filename)
+                new_name = f"image-{index:02d}.{ext}"
+                new_path = os.path.join(subfolder_path, new_name)
+
+                os.rename(old_path, new_path)
+                print(f"Renamed: {old_path} -> {new_path}")
+
+rename_images(r"C:\Users\bouak\OneDrive\Desktop\Dataloader Dataset", 'png')
